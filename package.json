@@ -7,14 +7,20 @@
   "scripts": {
     "prebuild": "rimraf ./dist",
     "build": "tsc",
-    "start": "node ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./dist"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fvilers/disposable.git"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "typescript-library",
+    "disposable"
+  ],
   "author": "Fabian Vilers <fabian.vilers@dev-one.com> (https://www.dev-one.com/)",
   "license": "MIT",
   "bugs": {
