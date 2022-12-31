@@ -1,6 +1,6 @@
 {
   "name": "@fvilers/disposable",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Provide a mechanism for releasing resources",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
