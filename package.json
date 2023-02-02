@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf ./dist",
     "build": "tsc",
-    "start": "node ./dist"
+    "prepare": "npm run build"
   },
   "publishConfig": {
     "access": "public"
