@@ -2,14 +2,16 @@ export interface Disposable {
   dispose(): void;
 }
 
-type ResourceBlockCallback<T extends Disposable> = (resource: T) => void;
+type ResourceBlockCallback<T extends Disposable> = (
+  resource: T
+) => void | Promise<void>;
 
-export function using<T extends Disposable>(
+export async function using<T extends Disposable>(
   resource: T,
   callback: ResourceBlockCallback<T>
-) {
+): Promise<void> {
   try {
-    callback(resource);
+    await Promise.resolve(callback(resource));
   } finally {
     resource.dispose();
   }
